@@ -8,7 +8,9 @@ function Home() {
   useEffect(() => {
     fetch("/articles")
       .then((r) => r.json())
-      .then(setArticles);
+      .then(message => {
+        console.log(message)
+        setArticles(message)});
   }, []);
 
   return (
